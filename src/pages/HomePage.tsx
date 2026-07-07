@@ -4,6 +4,7 @@ import { Hero } from '../components/Hero';
 import { About } from '../components/About';
 import { Skills } from '../components/Skills';
 import { Projects } from '../components/Projects';
+import { Templates } from '../components/Templates';
 import { Experience } from '../components/Experience';
 import { Contact } from '../components/Contact';
 
@@ -27,6 +28,7 @@ const HomePage: React.FC = () => {
       <About />
       <Skills />
       <Projects />
+      <Templates />
       <Experience />
       <Contact />
     </>

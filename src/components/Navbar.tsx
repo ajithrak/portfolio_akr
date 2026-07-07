@@ -11,7 +11,7 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
-  const navLinks = ['About', 'Skills', 'Projects', 'Experience', 'Contact'];
+  const navLinks = ['About', 'Skills', 'Projects', 'Templates', 'Experience', 'Contact'];
 
   const handleScroll = (id: string) => {
     setIsOpen(false);

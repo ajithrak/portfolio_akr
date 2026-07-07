@@ -8,6 +8,8 @@ import FintechPage from './pages/FintechPage';
 import HealthcarePage from './pages/HealthcarePage';
 import DemoFintechPage from './pages/DemoFintechPage';
 import DemoHealthcarePage from './pages/DemoHealthcarePage';
+import DemoEcommercePage from './pages/DemoEcommercePage';
+import DemoEdtechPage from './pages/DemoEdtechPage';
 
 const AppRoutes = () => (
   <Routes>
@@ -16,6 +18,8 @@ const AppRoutes = () => (
     <Route path="/healthcare" element={<HealthcarePage />} />
     <Route path="/demo/fintech" element={<DemoFintechPage />} />
     <Route path="/demo/healthcare" element={<DemoHealthcarePage />} />
+    <Route path="/demo/ecommerce" element={<DemoEcommercePage />} />
+    <Route path="/demo/edtech" element={<DemoEdtechPage />} />
   </Routes>
 );
 
