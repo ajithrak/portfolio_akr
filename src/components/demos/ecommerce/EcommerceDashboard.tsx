@@ -1,5 +1,5 @@
 import React from 'react';
-import { RevenueStat, EcommerceCard, OrderRow } from './ui';
+import { RevenueStat, EcommerceCard, OrderTableRow } from './ui';
 import { REVENUE_TREND, RECENT_ORDERS, formatCurrency } from './data';
 
 export const EcommerceDashboard: React.FC = () => (
@@ -15,33 +15,41 @@ export const EcommerceDashboard: React.FC = () => (
       <RevenueStat label="Avg. Order Value" value={formatCurrency(76.5)} change="-1.8% vs last month" />
     </div>
 
-    <div className="grid lg:grid-cols-3 gap-4">
-      <EcommerceCard className="lg:col-span-2">
-        <h2 className="text-sm font-semibold text-slate-900 mb-6">Revenue trend</h2>
-        <div className="flex items-end gap-3 h-40">
-          {REVENUE_TREND.map((m) => (
-            <div key={m.label} className="flex-1 bg-orange-400 rounded-t" style={{ height: `${m.value}%` }} />
-          ))}
-        </div>
-        <div className="flex gap-3 mt-2">
-          {REVENUE_TREND.map((m) => (
-            <span key={m.label} className="flex-1 text-center text-[10px] text-slate-500">
-              {m.label}
-            </span>
-          ))}
-        </div>
-      </EcommerceCard>
+    <EcommerceCard>
+      <h2 className="text-sm font-semibold text-slate-900 mb-6">Revenue trend</h2>
+      <div className="flex items-end gap-3 h-32">
+        {REVENUE_TREND.map((m) => (
+          <div key={m.label} className="flex-1 bg-orange-400 rounded-t" style={{ height: `${m.value}%` }} />
+        ))}
+      </div>
+      <div className="flex gap-3 mt-2">
+        {REVENUE_TREND.map((m) => (
+          <span key={m.label} className="flex-1 text-center text-[10px] text-slate-500">
+            {m.label}
+          </span>
+        ))}
+      </div>
+    </EcommerceCard>
 
-      <EcommerceCard>
-        <h2 className="text-sm font-semibold text-slate-900 mb-4">Recent orders</h2>
-        <ul className="space-y-4">
+    <EcommerceCard className="p-0 overflow-hidden">
+      <h2 className="text-sm font-semibold text-slate-900 px-5 pt-5 pb-3">Recent orders</h2>
+      <table className="w-full text-sm">
+        <thead>
+          <tr className="text-left text-xs text-slate-500 border-b border-slate-100">
+            <th className="pb-3 px-5 font-medium">Order</th>
+            <th className="pb-3 px-5 font-medium hidden sm:table-cell">Customer</th>
+            <th className="pb-3 px-5 font-medium hidden sm:table-cell">Items</th>
+            <th className="pb-3 px-5 font-medium hidden sm:table-cell">Date</th>
+            <th className="pb-3 px-5 font-medium">Total</th>
+            <th className="pb-3 px-5 font-medium text-right">Status</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-slate-100">
           {RECENT_ORDERS.map((order) => (
-            <li key={order.id}>
-              <OrderRow order={order} />
-            </li>
+            <OrderTableRow key={order.id} order={order} />
           ))}
-        </ul>
-      </EcommerceCard>
-    </div>
+        </tbody>
+      </table>
+    </EcommerceCard>
   </div>
 );

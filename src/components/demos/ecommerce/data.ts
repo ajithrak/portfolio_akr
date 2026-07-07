@@ -14,15 +14,16 @@ export interface Product {
   price: number;
   stock: number;
   status: 'In Stock' | 'Low Stock' | 'Out of Stock';
+  swatchClassName: string;
 }
 
 export const PRODUCTS: Product[] = [
-  { id: 'p1', name: 'Canvas Weekender Bag', category: 'Bags', price: 89, stock: 142, status: 'In Stock' },
-  { id: 'p2', name: 'Ceramic Pour-Over Set', category: 'Home', price: 42, stock: 8, status: 'Low Stock' },
-  { id: 'p3', name: 'Merino Wool Scarf', category: 'Apparel', price: 58, stock: 0, status: 'Out of Stock' },
-  { id: 'p4', name: 'Recycled Steel Water Bottle', category: 'Outdoor', price: 24, stock: 310, status: 'In Stock' },
-  { id: 'p5', name: 'Linen Throw Pillow', category: 'Home', price: 34, stock: 6, status: 'Low Stock' },
-  { id: 'p6', name: 'Leather Card Holder', category: 'Accessories', price: 29, stock: 96, status: 'In Stock' },
+  { id: 'p1', name: 'Canvas Weekender Bag', category: 'Bags', price: 89, stock: 142, status: 'In Stock', swatchClassName: 'bg-amber-200' },
+  { id: 'p2', name: 'Ceramic Pour-Over Set', category: 'Home', price: 42, stock: 8, status: 'Low Stock', swatchClassName: 'bg-stone-300' },
+  { id: 'p3', name: 'Merino Wool Scarf', category: 'Apparel', price: 58, stock: 0, status: 'Out of Stock', swatchClassName: 'bg-rose-200' },
+  { id: 'p4', name: 'Recycled Steel Water Bottle', category: 'Outdoor', price: 24, stock: 310, status: 'In Stock', swatchClassName: 'bg-sky-200' },
+  { id: 'p5', name: 'Linen Throw Pillow', category: 'Home', price: 34, stock: 6, status: 'Low Stock', swatchClassName: 'bg-emerald-200' },
+  { id: 'p6', name: 'Leather Card Holder', category: 'Accessories', price: 29, stock: 96, status: 'In Stock', swatchClassName: 'bg-orange-200' },
 ];
 
 export const PRODUCT_STATUS_STYLES: Record<Product['status'], string> = {

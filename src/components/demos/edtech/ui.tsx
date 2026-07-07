@@ -16,45 +16,73 @@ export const AssignmentStatusBadge: React.FC<{ status: Assignment['status'] }> =
   </span>
 );
 
-export const ProgressBar: React.FC<{ progress: number }> = ({ progress }) => (
-  <div className="w-full h-1.5 rounded-full bg-slate-100">
-    <div className="h-1.5 rounded-full bg-violet-500" style={{ width: `${progress}%` }} />
-  </div>
-);
+export const ProgressRing: React.FC<{ progress: number; size?: number }> = ({ progress, size = 52 }) => {
+  const stroke = 4;
+  const radius = (size - stroke) / 2;
+  const circumference = radius * 2 * Math.PI;
+  const offset = circumference - (progress / 100) * circumference;
 
-export const CourseRow: React.FC<{ course: Course }> = ({ course }) => (
-  <div className="flex items-center justify-between gap-3">
-    <div className="flex items-center gap-3 min-w-0 flex-1">
-      <span className="w-9 h-9 shrink-0 rounded-lg bg-violet-100 text-violet-700 flex items-center justify-center text-xs font-semibold">
-        {course.title
-          .split(' ')
-          .slice(0, 2)
-          .map((w) => w[0])
-          .join('')}
+  return (
+    <div className="relative shrink-0" style={{ width: size, height: size }}>
+      <svg width={size} height={size} className="-rotate-90">
+        <circle cx={size / 2} cy={size / 2} r={radius} strokeWidth={stroke} className="stroke-violet-100" fill="none" />
+        <circle
+          cx={size / 2}
+          cy={size / 2}
+          r={radius}
+          strokeWidth={stroke}
+          className="stroke-violet-500"
+          fill="none"
+          strokeDasharray={circumference}
+          strokeDashoffset={offset}
+          strokeLinecap="round"
+        />
+      </svg>
+      <span className="absolute inset-0 flex items-center justify-center text-[11px] font-semibold text-slate-700">
+        {progress}%
       </span>
-      <div className="min-w-0 flex-1">
-        <p className="text-sm font-medium text-slate-800 truncate">{course.title}</p>
-        <p className="text-xs text-slate-500 mb-1.5">
+    </div>
+  );
+};
+
+export const CourseCard: React.FC<{ course: Course }> = ({ course }) => (
+  <div className="rounded-xl border border-slate-200 bg-white p-4 flex flex-col gap-3">
+    <div className="flex items-start justify-between gap-3">
+      <div className="min-w-0">
+        <p className="text-sm font-semibold text-slate-800 truncate">{course.title}</p>
+        <p className="text-xs text-slate-500">
           {course.instructor} · {course.category}
         </p>
-        <ProgressBar progress={course.progress} />
       </div>
+      <ProgressRing progress={course.progress} />
     </div>
     <CourseStatusBadge status={course.status} />
   </div>
 );
 
-export const AssignmentRow: React.FC<{ assignment: Assignment }> = ({ assignment }) => (
-  <div className="flex items-center justify-between gap-3">
-    <div className="min-w-0">
-      <p className="text-sm font-medium text-slate-800 truncate">{assignment.title}</p>
-      <p className="text-xs text-slate-500">
-        {assignment.course} · Due {assignment.dueDate}
-      </p>
+export const AssignmentChecklistItem: React.FC<{ assignment: Assignment }> = ({ assignment }) => {
+  const isDone = assignment.status !== 'Pending';
+  return (
+    <div className="flex items-center gap-3">
+      <span
+        className={`w-5 h-5 shrink-0 rounded-full border-2 flex items-center justify-center ${
+          isDone ? 'bg-violet-500 border-violet-500' : 'border-slate-300'
+        }`}
+      >
+        {isDone && <span className="w-1.5 h-1.5 rounded-full bg-white" />}
+      </span>
+      <div className="min-w-0 flex-1">
+        <p className={`text-sm font-medium truncate ${isDone ? 'text-slate-400 line-through' : 'text-slate-800'}`}>
+          {assignment.title}
+        </p>
+        <p className="text-xs text-slate-500">
+          {assignment.course} · Due {assignment.dueDate}
+        </p>
+      </div>
+      <AssignmentStatusBadge status={assignment.status} />
     </div>
-    <AssignmentStatusBadge status={assignment.status} />
-  </div>
-);
+  );
+};
 
 export const EdtechToggle: React.FC<{ enabled: boolean; onToggle: () => void }> = ({ enabled, onToggle }) => (
   <button

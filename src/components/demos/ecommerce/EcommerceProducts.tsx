@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { EcommerceCard, ProductRow } from './ui';
+import { ProductCard } from './ui';
 import { PRODUCTS, type Product } from './data';
 
 const FILTERS = ['All', 'In Stock', 'Low Stock', 'Out of Stock'] as const;
@@ -28,15 +28,11 @@ export const EcommerceProducts: React.FC = () => {
         </div>
       </div>
 
-      <EcommerceCard>
-        <ul className="divide-y divide-slate-100">
-          {filtered.map((product) => (
-            <li key={product.id} className="py-3.5 first:pt-0 last:pb-0">
-              <ProductRow product={product} />
-            </li>
-          ))}
-        </ul>
-      </EcommerceCard>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {filtered.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
     </div>
   );
 };

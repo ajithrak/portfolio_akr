@@ -28,3 +28,15 @@ export const STATUS_STYLES: Record<Appointment['status'], string> = {
   Pending: 'bg-amber-50 text-amber-700',
   Completed: 'bg-slate-100 text-slate-500',
 };
+
+export interface ActivityItem {
+  id: string;
+  title: string;
+  meta: string;
+}
+
+export const RECENT_ACTIVITY: ActivityItem[] = [
+  { id: 'e1', title: 'Video session with Dr. Nair completed', meta: 'Jun 21, 10:30 AM' },
+  { id: 'e2', title: 'Prescription renewed for Sertraline', meta: 'Jun 18' },
+  { id: 'e3', title: 'New message from Dr. Lee', meta: 'Jun 15' },
+];

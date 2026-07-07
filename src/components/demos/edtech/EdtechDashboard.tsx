@@ -1,5 +1,5 @@
 import React from 'react';
-import { EdtechCard, CourseRow, AssignmentRow } from './ui';
+import { EdtechCard, CourseCard, AssignmentChecklistItem } from './ui';
 import { COURSES, UPCOMING_ASSIGNMENTS, WEEKLY_STUDY_TIME } from './data';
 
 export const EdtechDashboard: React.FC = () => {
@@ -7,12 +7,32 @@ export const EdtechDashboard: React.FC = () => {
 
   return (
     <div className="space-y-6">
+      <div className="rounded-xl bg-gradient-to-r from-violet-500 to-fuchsia-500 p-5 text-white flex items-center justify-between flex-wrap gap-4">
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-wide text-violet-100 mb-1">Learning streak</p>
+          <p className="text-2xl font-bold">12 days in a row</p>
+          <p className="text-sm text-violet-100 mt-1">Keep it going — study today to extend your streak.</p>
+        </div>
+        <div className="flex gap-1.5">
+          {['M', 'T', 'W', 'T', 'F', 'S', 'S'].map((d, idx) => (
+            <span
+              key={idx}
+              className={`w-7 h-7 rounded-full flex items-center justify-center text-xs font-semibold ${
+                idx < 5 ? 'bg-white text-violet-600' : 'bg-white/20 text-white'
+              }`}
+            >
+              {d}
+            </span>
+          ))}
+        </div>
+      </div>
+
       <div>
         <h1 className="text-xl font-bold text-slate-900">Welcome back, Sam</h1>
         <p className="text-sm text-slate-500">You're making great progress this week.</p>
       </div>
 
-      <div className="grid sm:grid-cols-3 gap-4">
+      <div className="grid sm:grid-cols-2 gap-4">
         <EdtechCard>
           <p className="text-xs font-medium text-slate-500 mb-2">Courses in progress</p>
           <p className="text-2xl font-bold text-slate-900">{inProgress.length}</p>
@@ -20,10 +40,6 @@ export const EdtechDashboard: React.FC = () => {
         <EdtechCard>
           <p className="text-xs font-medium text-slate-500 mb-2">Completed courses</p>
           <p className="text-2xl font-bold text-slate-900">{COURSES.filter((c) => c.status === 'Completed').length}</p>
-        </EdtechCard>
-        <EdtechCard>
-          <p className="text-xs font-medium text-slate-500 mb-2">Learning streak</p>
-          <p className="text-2xl font-bold text-slate-900">12 days</p>
         </EdtechCard>
       </div>
 
@@ -49,23 +65,21 @@ export const EdtechDashboard: React.FC = () => {
           <ul className="space-y-4">
             {UPCOMING_ASSIGNMENTS.slice(0, 4).map((a) => (
               <li key={a.id}>
-                <AssignmentRow assignment={a} />
+                <AssignmentChecklistItem assignment={a} />
               </li>
             ))}
           </ul>
         </EdtechCard>
       </div>
 
-      <EdtechCard>
+      <div>
         <h2 className="text-sm font-semibold text-slate-900 mb-4">Continue learning</h2>
-        <ul className="space-y-4">
+        <div className="grid sm:grid-cols-2 gap-4">
           {inProgress.map((course) => (
-            <li key={course.id}>
-              <CourseRow course={course} />
-            </li>
+            <CourseCard key={course.id} course={course} />
           ))}
-        </ul>
-      </EdtechCard>
+        </div>
+      </div>
     </div>
   );
 };

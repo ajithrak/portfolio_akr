@@ -31,6 +31,27 @@ export const AppointmentRow: React.FC<{ appt: Appointment }> = ({ appt }) => (
   </div>
 );
 
+export const TimelineItem: React.FC<{ title: string; meta: string; badge?: React.ReactNode; isLast?: boolean }> = ({
+  title,
+  meta,
+  badge,
+  isLast = false,
+}) => (
+  <div className="flex gap-3">
+    <div className="flex flex-col items-center">
+      <span className="w-2.5 h-2.5 rounded-full bg-sky-500 mt-1.5 shrink-0" />
+      {!isLast && <span className="w-px flex-1 bg-slate-200 my-1" />}
+    </div>
+    <div className={`flex-1 flex items-center justify-between gap-3 ${isLast ? '' : 'pb-5'}`}>
+      <div className="min-w-0">
+        <p className="text-sm font-medium text-slate-800 truncate">{title}</p>
+        <p className="text-xs text-slate-500">{meta}</p>
+      </div>
+      {badge}
+    </div>
+  </div>
+);
+
 export const HealthcareToggle: React.FC<{ enabled: boolean; onToggle: () => void }> = ({ enabled, onToggle }) => (
   <button
     onClick={onToggle}

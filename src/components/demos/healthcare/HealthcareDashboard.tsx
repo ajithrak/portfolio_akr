@@ -1,6 +1,6 @@
 import React from 'react';
-import { HealthcareCard, AppointmentRow } from './ui';
-import { APPOINTMENTS } from './data';
+import { HealthcareCard, AppointmentRow, TimelineItem } from './ui';
+import { APPOINTMENTS, RECENT_ACTIVITY } from './data';
 
 const METRICS = [
   { label: 'Resting heart rate', value: '68 bpm' },
@@ -55,11 +55,16 @@ export const HealthcareDashboard: React.FC = () => {
 
         <HealthcareCard>
           <h2 className="text-sm font-semibold text-slate-900 mb-4">Recent activity</h2>
-          <ul className="space-y-3 text-sm text-slate-600">
-            <li>Video session with Dr. Nair completed</li>
-            <li>Prescription renewed for Sertraline</li>
-            <li>New message from Dr. Lee</li>
-          </ul>
+          <div>
+            {RECENT_ACTIVITY.map((item, idx) => (
+              <TimelineItem
+                key={item.id}
+                title={item.title}
+                meta={item.meta}
+                isLast={idx === RECENT_ACTIVITY.length - 1}
+              />
+            ))}
+          </div>
         </HealthcareCard>
       </div>
     </div>

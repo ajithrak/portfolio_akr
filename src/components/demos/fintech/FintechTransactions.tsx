@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { FintechCard, TransactionRow } from './ui';
-import { TRANSACTIONS } from './data';
+import { FiArrowUpRight, FiArrowDownLeft } from 'react-icons/fi';
+import { FintechCard } from './ui';
+import { TRANSACTIONS, formatCurrency } from './data';
 
 const FILTERS = ['All', 'Income', 'Expense'] as const;
 
@@ -32,14 +33,50 @@ export const FintechTransactions: React.FC = () => {
         </div>
       </div>
 
-      <FintechCard>
-        <ul className="divide-y divide-slate-800">
-          {filtered.map((tx) => (
-            <li key={tx.id} className="py-3.5 first:pt-0 last:pb-0">
-              <TransactionRow tx={tx} />
-            </li>
-          ))}
-        </ul>
+      <FintechCard className="p-0 overflow-hidden">
+        <table className="w-full text-sm">
+          <thead>
+            <tr className="text-left text-xs text-slate-500 border-b border-slate-800">
+              <th className="py-3 px-5 font-medium">Description</th>
+              <th className="py-3 px-5 font-medium hidden sm:table-cell">Category</th>
+              <th className="py-3 px-5 font-medium hidden sm:table-cell">Date</th>
+              <th className="py-3 px-5 font-medium text-right">Amount</th>
+            </tr>
+          </thead>
+          <tbody className="divide-y divide-slate-800">
+            {filtered.map((tx) => (
+              <tr key={tx.id}>
+                <td className="py-3.5 px-5">
+                  <div className="flex items-center gap-2.5">
+                    <span
+                      className={`w-7 h-7 shrink-0 rounded-full flex items-center justify-center ${
+                        tx.direction === 'in' ? 'bg-emerald-500/10 text-emerald-400' : 'bg-slate-800 text-slate-400'
+                      }`}
+                    >
+                      {tx.direction === 'in' ? <FiArrowDownLeft size={12} /> : <FiArrowUpRight size={12} />}
+                    </span>
+                    <div className="min-w-0">
+                      <p className="text-white font-medium truncate">{tx.name}</p>
+                      <p className="text-xs text-slate-500 sm:hidden">
+                        {tx.category} · {tx.date}
+                      </p>
+                    </div>
+                  </div>
+                </td>
+                <td className="py-3.5 px-5 text-slate-400 hidden sm:table-cell">{tx.category}</td>
+                <td className="py-3.5 px-5 text-slate-400 hidden sm:table-cell">{tx.date}</td>
+                <td
+                  className={`py-3.5 px-5 text-right font-semibold ${
+                    tx.direction === 'in' ? 'text-emerald-400' : 'text-slate-300'
+                  }`}
+                >
+                  {tx.direction === 'in' ? '+' : '-'}
+                  {formatCurrency(tx.amount)}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
       </FintechCard>
     </div>
   );

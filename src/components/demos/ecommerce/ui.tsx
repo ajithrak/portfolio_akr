@@ -27,45 +27,41 @@ export const OrderStatusBadge: React.FC<{ status: Order['status'] }> = ({ status
   <span className={`text-xs font-semibold px-2.5 py-1 rounded-full ${ORDER_STATUS_STYLES[status]}`}>{status}</span>
 );
 
-export const OrderRow: React.FC<{ order: Order }> = ({ order }) => (
-  <div className="flex items-center justify-between gap-3">
-    <div className="min-w-0">
-      <p className="text-sm font-medium text-slate-800 truncate">
-        {order.orderNumber} · {order.customer}
-      </p>
-      <p className="text-xs text-slate-500">
-        {order.items} item{order.items > 1 ? 's' : ''} · {order.date}
-      </p>
+export const ProductCard: React.FC<{ product: Product }> = ({ product }) => (
+  <div className="rounded-xl border border-slate-200 overflow-hidden bg-white">
+    <div className={`h-28 flex items-center justify-center text-2xl font-bold text-slate-700/70 ${product.swatchClassName}`}>
+      {product.name
+        .split(' ')
+        .slice(0, 2)
+        .map((w) => w[0])
+        .join('')}
     </div>
-    <div className="flex items-center gap-3 shrink-0">
-      <span className="text-sm font-semibold text-slate-800">{formatCurrency(order.total)}</span>
-      <OrderStatusBadge status={order.status} />
+    <div className="p-4">
+      <p className="text-sm font-semibold text-slate-800 truncate">{product.name}</p>
+      <p className="text-xs text-slate-500 mb-3">
+        {product.category} · {product.stock} in stock
+      </p>
+      <div className="flex items-center justify-between">
+        <span className="text-sm font-bold text-slate-900">{formatCurrency(product.price)}</span>
+        <ProductStatusBadge status={product.status} />
+      </div>
     </div>
   </div>
 );
 
-export const ProductRow: React.FC<{ product: Product }> = ({ product }) => (
-  <div className="flex items-center justify-between gap-3">
-    <div className="flex items-center gap-3 min-w-0">
-      <span className="w-9 h-9 shrink-0 rounded-lg bg-orange-100 text-orange-700 flex items-center justify-center text-xs font-semibold">
-        {product.name
-          .split(' ')
-          .slice(0, 2)
-          .map((w) => w[0])
-          .join('')}
-      </span>
-      <div className="min-w-0">
-        <p className="text-sm font-medium text-slate-800 truncate">{product.name}</p>
-        <p className="text-xs text-slate-500">
-          {product.category} · {product.stock} in stock
-        </p>
-      </div>
-    </div>
-    <div className="flex items-center gap-3 shrink-0">
-      <span className="text-sm font-semibold text-slate-800">{formatCurrency(product.price)}</span>
-      <ProductStatusBadge status={product.status} />
-    </div>
-  </div>
+export const OrderTableRow: React.FC<{ order: Order }> = ({ order }) => (
+  <tr>
+    <td className="py-3.5 px-5 font-medium text-slate-800">{order.orderNumber}</td>
+    <td className="py-3.5 px-5 text-slate-600 hidden sm:table-cell">{order.customer}</td>
+    <td className="py-3.5 px-5 text-slate-600 hidden sm:table-cell">
+      {order.items} item{order.items > 1 ? 's' : ''}
+    </td>
+    <td className="py-3.5 px-5 text-slate-600 hidden sm:table-cell">{order.date}</td>
+    <td className="py-3.5 px-5 font-semibold text-slate-800">{formatCurrency(order.total)}</td>
+    <td className="py-3.5 px-5 text-right">
+      <OrderStatusBadge status={order.status} />
+    </td>
+  </tr>
 );
 
 export const EcommerceToggle: React.FC<{ enabled: boolean; onToggle: () => void }> = ({ enabled, onToggle }) => (

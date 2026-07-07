@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { EdtechCard, CourseRow } from './ui';
+import { CourseCard } from './ui';
 import { COURSES, type Course } from './data';
 
 const FILTERS = ['All', 'In Progress', 'Completed', 'Not Started'] as const;
@@ -28,15 +28,11 @@ export const EdtechCourses: React.FC = () => {
         </div>
       </div>
 
-      <EdtechCard>
-        <ul className="divide-y divide-slate-100">
-          {filtered.map((course) => (
-            <li key={course.id} className="py-4 first:pt-0 last:pb-0">
-              <CourseRow course={course} />
-            </li>
-          ))}
-        </ul>
-      </EdtechCard>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {filtered.map((course) => (
+          <CourseCard key={course.id} course={course} />
+        ))}
+      </div>
     </div>
   );
 };
