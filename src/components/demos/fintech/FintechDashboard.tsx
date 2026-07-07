@@ -20,10 +20,14 @@ export const FintechDashboard: React.FC = () => (
         <h2 className="text-sm font-semibold text-white mb-6">Spending overview</h2>
         <div className="flex items-end gap-3 h-40">
           {SPEND_TREND.map((m) => (
-            <div key={m.label} className="flex-1 flex flex-col items-center gap-2">
-              <div className="w-full bg-teal-500/80 rounded-t" style={{ height: `${m.value}%` }} />
-              <span className="text-[10px] text-slate-500">{m.label}</span>
-            </div>
+            <div key={m.label} className="flex-1 bg-teal-500/80 rounded-t" style={{ height: `${m.value}%` }} />
+          ))}
+        </div>
+        <div className="flex gap-3 mt-2">
+          {SPEND_TREND.map((m) => (
+            <span key={m.label} className="flex-1 text-center text-[10px] text-slate-500">
+              {m.label}
+            </span>
           ))}
         </div>
       </FintechCard>

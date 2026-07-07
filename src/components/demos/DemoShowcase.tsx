@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 
 export interface DemoPageDef {
   key: string;
@@ -31,8 +31,17 @@ export const DemoShowcase: React.FC<DemoShowcaseProps> = ({
   idleTabClassName,
   frameChromeClassName,
 }) => {
-  const [activeKey, setActiveKey] = useState(pages[0].key);
+  const [searchParams] = useSearchParams();
+  const requestedKey = searchParams.get('page');
+  const [activeKey, setActiveKey] = useState(
+    requestedKey && pages.some((p) => p.key === requestedKey) ? requestedKey : pages[0].key
+  );
   const activePage = pages.find((p) => p.key === activeKey) ?? pages[0];
+
+  // Bare rendering of just the mock app screen, e.g. for capturing clean product screenshots.
+  if (searchParams.get('embed') === '1') {
+    return <>{activePage.render(setActiveKey)}</>;
+  }
 
   return (
     <section className="py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
