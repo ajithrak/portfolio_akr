@@ -20,7 +20,7 @@ export const TEMPLATES_DATA: TemplateItem[] = [
   },
   {
     slug: 'healthcare',
-    name: 'CareMe Health',
+    name: 'VitalCare',
     title: 'Healthcare',
     description: 'Patient portal template: login, appointment booking, dashboard, and settings.',
     href: '/demo/healthcare',

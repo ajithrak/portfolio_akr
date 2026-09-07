@@ -19,14 +19,14 @@ export interface SkillCategory {
 export const HERO_DATA = {
   name: "Ajithkumar",
   role: "Senior Software Engineer / Front-End Developer",
-  tagline: "Building secure, high-performance, and scalable enterprise web applications.",
+  tagline: "React & Next.js engineer who ships production banking software for JPMorgan Chase — from RTK Query data layers to SSR performance work measured in load-time percentages, not adjectives.",
 };
 
 export const ABOUT_DATA = {
-  bio: "Senior Software Engineer with 8+ years of professional experience in software development, including 5+ years of dedicated specialization in React and modern frontend ecosystems. Proven track record architecting high-performance, secure, and user-centric financial and healthcare applications. Expert in robust state management, server-side rendering architecture, and seamless API integrations.",
+  bio: "Senior Software Engineer with 8 years in the tech industry (since Jul 2018) and 5-6 years of hands-on software engineering experience building with React and modern frontend ecosystems (since Sep 2020). Proven track record architecting high-performance, secure, and user-centric financial and healthcare applications. Expert in robust state management, server-side rendering architecture, and seamless API integrations.",
   highlights: [
-    "8+ years of overall software industry experience",
-    "5+ years of core enterprise experience with React & Next.js",
+    "8 years total tenure in the tech industry (since Jul 2018)",
+    "5-6 years of hands-on software engineering, specializing in React & Next.js (since Sep 2020)",
     "Strong background in financial (JPMorgan Chase) and healthcare technology solutions",
   ],
 };
@@ -62,17 +62,17 @@ export const SKILLS_DATA: SkillCategory[] = [
 export const PROJECTS_DATA: Project[] = [
   {
     title: "Enterprise Banking Web Application",
-    description: "Developed a scalable and secure banking application handling complex financial workflows and high user traffic. Implemented code-splitting, lazy loading, and SSR techniques to dramatically optimize initial page load times.",
+    description: "Developed a scalable and secure banking application handling complex financial workflows and high user traffic. Implemented code-splitting, lazy loading, and SSR techniques that cut initial page load times by [X%] and supported [X]+ concurrent users.",
     techStack: ["React.js", "Next.js", "RTK Query", "Node.js", "REST APIs"]
   },
   {
     title: "Mental Health Appointment Booking Platform",
-    description: "Spearheaded a state-of-the-art appointment booking ecosystem for web and mobile. Integrated secure, real-time video conferencing and chat functionalities to support confidential remote health sessions.",
+    description: "Spearheaded a state-of-the-art appointment booking ecosystem for web and mobile, serving [X]K+ patients as part of a [X]-person engineering team. Integrated secure, real-time video conferencing and chat functionalities to support confidential remote health sessions.",
     techStack: ["React", "React Native", "Next.js", "Redux", "TailwindCSS", "Firebase"]
   },
   {
     title: "High-Performance API & State Management System",
-    description: "Architected a centralized data-fetching and caching layer. Integrated query invalidation strategies and global error handling filters that minimized network payload overhead and kept application state consistent.",
+    description: "Architected a centralized data-fetching and caching layer. Integrated query invalidation strategies and global error handling filters that cut redundant network calls by [X%] and reduced payload overhead across [X]+ API endpoints.",
     techStack: ["RTK Query", "Redux Toolkit", "React.js"]
   },
   {

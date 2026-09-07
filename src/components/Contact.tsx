@@ -49,7 +49,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-16 relative">
+    <section id="contact" className="py-20 bg-gray-50/80 dark:bg-zinc-900/30 scroll-mt-16 relative">
       
       {/* Framer Motion Toast Notifications */}
       <div className="fixed bottom-5 right-5 z-50 pointer-events-none flex flex-col gap-2">
@@ -85,7 +85,7 @@ export const Contact: React.FC = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.6 }}
-        className="grid md:grid-cols-5 gap-12"
+        className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-5 gap-12"
       >
         <div className="md:col-span-2 space-y-4">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Get In Touch</h2>
@@ -96,6 +96,16 @@ export const Contact: React.FC = () => {
             <p>📍 Location: Remote / Global Hybrid</p>
             <p>✉ Email: ajithrak22@gmail.com</p>
           </div>
+          <a
+            href="/resume.pdf"
+            download
+            className="inline-flex items-center gap-2 mt-2 px-5 py-2.5 bg-white dark:bg-zinc-900 border border-gray-300 dark:border-zinc-700 hover:border-indigo-500 dark:hover:border-indigo-500 text-gray-900 dark:text-white font-medium rounded-lg shadow-sm transition-colors"
+          >
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Download Resume
+          </a>
         </div>
 
         <div className="md:col-span-3">

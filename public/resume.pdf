@@ -1,0 +1,71 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /Resources << /Font << /F1 4 0 R /F2 5 0 R >> >> /MediaBox [0 0 612 792] /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+6 0 obj
+<< /Length 3186 >>
+stream
+BT /F2 22 Tf 72 740 Td (Ajithkumar) Tj ET
+BT /F1 12 Tf 72 720 Td (Senior Software Engineer / Front-End Developer) Tj ET
+BT /F1 10 Tf 72 704 Td (ajithrak22@gmail.com  |  linkedin.com/in/ajith-kumar-6080b8152  |  github.com/ajithrak  |  portfolioakr.vercel.app) Tj ET
+BT /F2 14 Tf 72 680 Td (Summary) Tj ET
+BT /F1 10 Tf 72 660 Td (Senior Software Engineer with 8 years in the tech industry \(since Jul 2018\) and 5-6 years of) Tj ET
+BT /F1 10 Tf 72 647 Td (hands-on engineering with React and modern frontend ecosystems \(since Sep 2020\). Track record) Tj ET
+BT /F1 10 Tf 72 634 Td (architecting high-performance, secure, user-centric financial and healthcare applications.) Tj ET
+BT /F2 14 Tf 72 613 Td (Experience) Tj ET
+BT /F2 11 Tf 72 593 Td (Senior Software Engineer -- Photon Interactive Pvt Ltd \(Client: JPMorgan Chase) Tj ET
+BT /F2 11 Tf 72 579 Td (and Co\) | Apr 2025 - Present) Tj ET
+BT /F1 10 Tf 80 565 Td (- Architecting scalable financial workflows and secure enterprise banking portals leveraging) Tj ET
+BT /F1 10 Tf 80 552 Td (  SSR optimizations to lower load speeds.) Tj ET
+BT /F1 10 Tf 80 539 Td (- Implemented streamlined data-fetching using RTK Query for predictable state and) Tj ET
+BT /F1 10 Tf 80 526 Td (  low-latency, heavily cached API footprints.) Tj ET
+BT /F1 10 Tf 80 513 Td (- Engineered clean RESTful backend support logic using Node.js for decoupled full-stack) Tj ET
+BT /F1 10 Tf 80 500 Td (  communication.) Tj ET
+BT /F2 11 Tf 72 481 Td (Front-End Developer -- CareMe Health Pvt Ltd | Sep 2020 - Mar 2025) Tj ET
+BT /F1 10 Tf 80 467 Td (- Designed and launched responsive cross-platform appointment booking interfaces for) Tj ET
+BT /F1 10 Tf 80 454 Td (  healthcare access.) Tj ET
+BT /F1 10 Tf 80 441 Td (- Contributed to secure Electronic Health Records \(EHR\) integrations meeting healthcare) Tj ET
+BT /F1 10 Tf 80 428 Td (  regulatory standards.) Tj ET
+BT /F1 10 Tf 80 415 Td (- Developed real-time video modules, contextual chat windows, and cross-platform push) Tj ET
+BT /F1 10 Tf 80 402 Td (  notifications.) Tj ET
+BT /F2 11 Tf 72 383 Td (Technical Support Trainee -- Satvat Infosol Pvt Ltd | Jul 2018 - May 2020) Tj ET
+BT /F1 10 Tf 80 369 Td (- Supported web infrastructure for high-concurrency online examination platforms.) Tj ET
+BT /F2 14 Tf 72 348 Td (Skills) Tj ET
+BT /F1 10 Tf 72 328 Td (Frontend: React.js, Next.js, React Native, TypeScript, JavaScript \(ES6+\), HTML5, CSS3) Tj ET
+BT /F1 10 Tf 72 315 Td (State & Data: Redux, Redux Toolkit \(RTK\), RTK Query, REST APIs) Tj ET
+BT /F1 10 Tf 72 302 Td (Styling: TailwindCSS, Bootstrap, Responsive Design) Tj ET
+BT /F1 10 Tf 72 289 Td (Backend/Cloud: Node.js, Firebase) Tj ET
+BT /F2 14 Tf 72 268 Td (Selected Projects) Tj ET
+BT /F1 10 Tf 80 248 Td (- Enterprise Banking Web Application -- secure, high-traffic banking platform; SSR +) Tj ET
+BT /F1 10 Tf 80 235 Td (  code-splitting for faster loads.) Tj ET
+BT /F1 10 Tf 80 222 Td (- Mental Health Appointment Booking Platform -- cross-platform booking with real-time) Tj ET
+BT /F1 10 Tf 80 209 Td (  video/chat.) Tj ET
+BT /F1 10 Tf 80 196 Td (- High-Performance API and State Management System -- centralized RTK Query caching layer.) Tj ET
+endstream
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000000321 00000 n 
+0000000396 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+3634
+%%EOF

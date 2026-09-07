@@ -53,7 +53,7 @@ export const Projects: React.FC = () => {
               <Link
                 key={idx}
                 to={route}
-                className="group flex flex-col h-full bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden hover:shadow-md transition-shadow"
+                className="group flex flex-col h-full bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all"
               >
                 {card}
               </Link>
