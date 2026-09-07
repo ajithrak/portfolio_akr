@@ -19,15 +19,15 @@ export interface SkillCategory {
 export const HERO_DATA = {
   name: "Ajithkumar",
   role: "Senior Software Engineer / Front-End Developer",
-  tagline: "React & Next.js engineer who ships production banking software for JPMorgan Chase — from RTK Query data layers to SSR performance work measured in load-time percentages, not adjectives.",
+  tagline: "React & Next.js engineer building AI-integrated e-commerce experiences at OnTrac AI, with production banking software for JPMorgan Chase and healthcare platforms shipped along the way — measured in load-time percentages, not adjectives.",
 };
 
 export const ABOUT_DATA = {
-  bio: "Senior Software Engineer with 8 years in the tech industry (since Jul 2018) and 5-6 years of hands-on software engineering experience building with React and modern frontend ecosystems (since Sep 2020). Proven track record architecting high-performance, secure, and user-centric financial and healthcare applications. Expert in robust state management, server-side rendering architecture, and seamless API integrations.",
+  bio: "Senior Frontend Engineer with 8 years in the tech industry (since Jul 2018) and 5-6 years of hands-on software engineering experience building with React and modern frontend ecosystems (since Sep 2020). Specialized in building scalable, high-performance applications across fintech, healthcare, and AI/e-commerce domains. Expert in robust state management, server-side rendering architecture, real-time systems, and seamless API integrations.",
   highlights: [
     "8 years total tenure in the tech industry (since Jul 2018)",
     "5-6 years of hands-on software engineering, specializing in React & Next.js (since Sep 2020)",
-    "Strong background in financial (JPMorgan Chase) and healthcare technology solutions",
+    "Experience spans fintech (JPMorgan Chase), healthcare, and AI-driven e-commerce platforms",
   ],
 };
 
@@ -61,6 +61,11 @@ export const SKILLS_DATA: SkillCategory[] = [
 
 export const PROJECTS_DATA: Project[] = [
   {
+    title: "Ford Parts Locator Marketplace (AI-Integrated)",
+    description: "Building an e-commerce-style parts marketplace for locating Ford parts, with search, filtering, and discovery across a [X]-item catalog. Integrating AI-driven features into client-facing surfaces, cutting parts-lookup time by [X%].",
+    techStack: ["React.js", "Next.js", "AI Integrations", "TypeScript"]
+  },
+  {
     title: "Enterprise Banking Web Application",
     description: "Developed a scalable and secure banking application handling complex financial workflows and high user traffic. Implemented code-splitting, lazy loading, and SSR techniques that cut initial page load times by [X%] and supported [X]+ concurrent users.",
     techStack: ["React.js", "Next.js", "RTK Query", "Node.js", "REST APIs"]
@@ -89,9 +94,20 @@ export const PROJECTS_DATA: Project[] = [
 
 export const EXPERIENCE_DATA: ExperienceItem[] = [
   {
+    role: "Senior Frontend Developer",
+    company: "OnTrac AI",
+    period: "Jul 2026 - Present",
+    achievements: [
+      "Developing a Ford parts locator marketplace, an e-commerce-style platform for parts search, filtering, and discovery.",
+      "Integrating AI-driven features into client websites based on evolving project requirements.",
+      "Building responsive, high-performance UI components using React.js and Next.js.",
+      "Collaborating with cross-functional teams to translate business requirements into scalable frontend solutions."
+    ],
+  },
+  {
     role: "Senior Software Engineer",
     company: "Photon Interactive Pvt Ltd (Client: JPMorgan Chase & Co)",
-    period: "Apr 2025 - Present",
+    period: "Apr 2025 - Jul 2026",
     achievements: [
       "Architecting scalable financial workflows and secure enterprise banking portals leveraging SSR optimizations to drastically lower load speeds.",
       "Implemented streamlined data-fetching paradigms using RTK Query, resulting in a predictable application state and heavily cached, low-latency API footprints.",
