@@ -25,6 +25,16 @@ export const Contact: React.FC = () => {
     e.preventDefault();
     if (!formRef.current) return;
 
+    // Also open the visitor's default mail app with the same message pre-filled,
+    // as a visible backup in case the EmailJS dispatch below fails or is blocked.
+    const formData = new FormData(formRef.current);
+    const name = formData.get('user_name')?.toString() ?? '';
+    const email = formData.get('user_email')?.toString() ?? '';
+    const message = formData.get('message')?.toString() ?? '';
+    const subject = `Portfolio inquiry from ${name || 'website visitor'}`;
+    const body = `${message}\n\n---\nFrom: ${name}\nEmail: ${email}`;
+    window.location.href = `mailto:ajithrak22@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
     setLoading(true);
 
     // Active EmailJS credentials
