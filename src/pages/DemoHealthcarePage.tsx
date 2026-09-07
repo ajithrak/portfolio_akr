@@ -50,8 +50,8 @@ const PAGES: DemoPageDef[] = [
 const DemoHealthcarePage: React.FC = () => (
   <DemoShowcase
     eyebrow="Live Demo"
-    title="CareMe Health — Healthcare Template"
-    description="A ready-to-use patient portal template: login, appointment booking, dashboard, and settings, reflecting the patterns built for the CareMe Health appointment platform."
+    title="VitalCare — Healthcare Template"
+    description="A ready-to-use patient portal template: login, appointment booking, dashboard, and settings, reflecting the patterns built for a mental health appointment platform."
     backHref="/healthcare"
     backLabel="Back to case study"
     pages={PAGES}

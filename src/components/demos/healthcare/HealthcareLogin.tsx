@@ -7,8 +7,8 @@ export const HealthcareLogin: React.FC = () => {
     <div className="min-h-[720px] bg-sky-50 flex items-center justify-center p-8">
       <div className="w-full max-w-sm bg-white border border-slate-200 rounded-2xl p-8 shadow-xl">
         <div className="flex items-center gap-2 mb-8">
-          <div className="w-9 h-9 rounded-lg bg-sky-500 flex items-center justify-center font-bold text-white">C</div>
-          <span className="text-lg font-bold text-slate-900">CareMe Health</span>
+          <div className="w-9 h-9 rounded-lg bg-sky-500 flex items-center justify-center font-bold text-white">V</div>
+          <span className="text-lg font-bold text-slate-900">VitalCare</span>
         </div>
 
         <div className="flex gap-1.5 bg-slate-100 rounded-lg p-1 mb-6">

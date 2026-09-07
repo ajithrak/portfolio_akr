@@ -18,7 +18,7 @@ export const FINTECH_DATA: CaseStudyData = {
   title: "Enterprise Banking Web Application",
   role: "Senior Software Engineer",
   company: "Photon Interactive Pvt Ltd (Client: JPMorgan Chase & Co)",
-  period: "Apr 2025 - Present",
+  period: "Apr 2025 - Jul 2026",
   summary:
     "A scalable, secure banking platform built to handle complex financial workflows and high user traffic.",
   overview:

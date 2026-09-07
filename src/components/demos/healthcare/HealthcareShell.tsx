@@ -14,9 +14,9 @@ export const HealthcareShell: React.FC<HealthcareShellProps> = ({ active, onNavi
       <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
         <div className="flex items-center gap-2 shrink-0">
           <div className="w-8 h-8 rounded-lg bg-sky-500 flex items-center justify-center font-bold text-white text-sm">
-            C
+            V
           </div>
-          <span className="font-bold text-slate-900 hidden sm:inline">CareMe Health</span>
+          <span className="font-bold text-slate-900 hidden sm:inline">VitalCare</span>
         </div>
 
         <nav className="flex items-center gap-1">

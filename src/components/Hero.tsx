@@ -4,7 +4,7 @@ import { HERO_DATA } from '../data/portfolioData';
 
 export const Hero: React.FC = () => {
   return (
-    <section className="min-h-[calc(100vh-4rem)] flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
+    <section className="min-h-[70vh] lg:min-h-[60vh] flex items-center justify-center py-14 lg:py-16 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl text-center">
         <motion.p 
           initial={{ opacity: 0, y: 15 }}

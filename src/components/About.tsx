@@ -18,13 +18,12 @@ export const About: React.FC = () => {
           <div className="md:col-span-2 space-y-4 text-gray-600 dark:text-zinc-400 text-lg leading-relaxed">
             <p>{ABOUT_DATA.bio}</p>
           </div>
-          <div className="bg-gray-50 dark:bg-zinc-900/50 p-6 rounded-xl border border-gray-100 dark:border-zinc-800">
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Core Principles</h3>
-            <ul className="space-y-3 text-sm text-gray-600 dark:text-zinc-400">
+          <div>
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-4 text-sm uppercase tracking-wider">Core Principles</h3>
+            <ul className="space-y-4 text-sm text-gray-600 dark:text-zinc-400">
               {ABOUT_DATA.highlights.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-2">
-                  <span className="text-indigo-500 mt-1">✔</span>
-                  <span>{item}</span>
+                <li key={idx} className="border-l-2 border-indigo-500 pl-4 py-0.5">
+                  {item}
                 </li>
               ))}
             </ul>
