@@ -24,42 +24,51 @@ export const Projects: React.FC = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {PROJECTS_DATA.map((project, idx) => {
             const route = PROJECT_ROUTES[project.title];
-            const card = (
-              <div className="p-6 flex flex-col h-full justify-between">
-                <div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-zinc-400 text-sm mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-1.5 mb-3">
-                  {project.techStack.map((tech, tIdx) => (
-                    <span key={tIdx} className="text-xs font-mono bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 px-2 py-0.5 rounded">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-                {route && (
-                  <span className="text-sm font-medium text-indigo-600 dark:text-indigo-400 group-hover:underline">
-                    View case study →
-                  </span>
-                )}
-              </div>
-            );
+            const hasLink = Boolean(route || project.externalUrl);
 
-            return route ? (
-              <Link
+            return (
+              <div
                 key={idx}
-                to={route}
-                className="group flex flex-col h-full bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                className={`flex flex-col h-full bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden transition-all ${
+                  hasLink ? 'hover:shadow-lg hover:-translate-y-0.5' : 'hover:shadow-md'
+                }`}
               >
-                {card}
-              </Link>
-            ) : (
-              <div key={idx} className="flex flex-col h-full bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-xl overflow-hidden hover:shadow-md transition-shadow">
-                {card}
+                <div className="p-6 flex flex-col h-full justify-between">
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-zinc-400 text-sm mb-6 leading-relaxed">
+                      {project.description}
+                    </p>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5 mb-3">
+                    {project.techStack.map((tech, tIdx) => (
+                      <span key={tIdx} className="text-xs font-mono bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 px-2 py-0.5 rounded">
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                  {hasLink && (
+                    <div className="flex flex-wrap gap-x-4 gap-y-1">
+                      {route && (
+                        <Link to={route} className="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline">
+                          View case study →
+                        </Link>
+                      )}
+                      {project.externalUrl && (
+                        <a
+                          href={project.externalUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline"
+                        >
+                          {project.externalLabel ?? 'View live'} ↗
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
               </div>
             );
           })}

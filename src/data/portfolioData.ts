@@ -2,6 +2,8 @@ export interface Project {
   title: string;
   description: string;
   techStack: string[];
+  externalUrl?: string;
+  externalLabel?: string;
 }
 
 export interface ExperienceItem {
@@ -72,8 +74,10 @@ export const PROJECTS_DATA: Project[] = [
   },
   {
     title: "Mental Health Appointment Booking Platform",
-    description: "Spearheaded a state-of-the-art appointment booking ecosystem for web and mobile, serving [X]K+ patients as part of a [X]-person engineering team. Integrated secure, real-time video conferencing and chat functionalities to support confidential remote health sessions.",
-    techStack: ["React", "React Native", "Next.js", "Redux", "TailwindCSS", "Firebase"]
+    description: "Built the CareMe Health React Native app from scratch and shipped it to the Google Play Store, where it has 5K+ downloads and a 4.3★ rating. Integrated secure, real-time video conferencing and chat functionalities to support confidential remote health sessions.",
+    techStack: ["React", "React Native", "Next.js", "Redux", "TailwindCSS", "Firebase"],
+    externalUrl: "https://play.google.com/store/apps/details?id=com.careme",
+    externalLabel: "View on Play Store"
   },
   {
     title: "High-Performance API & State Management System",
@@ -87,7 +91,7 @@ export const PROJECTS_DATA: Project[] = [
   },
   {
     title: "TNFoodsafety Complaint Redressal System",
-    description: "Led development for a dual-facing public reporting application and official administrative dashboard, maintaining strict compliance with government data integrity and protection standards.",
+    description: "Built two React Native apps from scratch: a public-facing Consumer app for filing food safety complaints and an Officials app for administrative case management, maintaining strict compliance with government data integrity and protection standards.",
     techStack: ["React", "React Native", "Redux", "Bootstrap", "Firebase"]
   }
 ];
@@ -120,6 +124,7 @@ export const EXPERIENCE_DATA: ExperienceItem[] = [
     period: "Sep 2020 - Mar 2025",
     achievements: [
       "Designed and launched responsive cross-platform appointment booking interfaces, simplifying customer healthcare access networks.",
+      "Built and published the CareMe Health React Native app from scratch to the Google Play Store, growing it to 5K+ downloads and a 4.3★ rating.",
       "Contributed to secure Electronic Health Records (EHR) system integrations while preserving strict healthcare regulatory standards.",
       "Developed interactive features including real-time video modules, contextual chat windows, and instant cross-platform push notifications."
     ],
