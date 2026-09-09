@@ -11,6 +11,7 @@ import DemoFintechPage from './pages/DemoFintechPage';
 import DemoHealthcarePage from './pages/DemoHealthcarePage';
 import DemoEcommercePage from './pages/DemoEcommercePage';
 import DemoEdtechPage from './pages/DemoEdtechPage';
+import DemoAuraPage from './pages/DemoAuraPage';
 
 const AppRoutes = () => (
   <Routes>
@@ -22,6 +23,7 @@ const AppRoutes = () => (
     <Route path="/demo/healthcare" element={<DemoHealthcarePage />} />
     <Route path="/demo/ecommerce" element={<DemoEcommercePage />} />
     <Route path="/demo/edtech" element={<DemoEdtechPage />} />
+    <Route path="/demo/aura" element={<DemoAuraPage />} />
   </Routes>
 );
 
