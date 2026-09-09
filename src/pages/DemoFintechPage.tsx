@@ -8,7 +8,7 @@ import { FintechProfile } from '../components/demos/fintech/FintechProfile';
 import { FintechSettings } from '../components/demos/fintech/FintechSettings';
 
 const PAGES: DemoPageDef[] = [
-  { key: 'login', label: 'Login', render: (navigate) => <FintechLogin onSuccess={() => navigate('dashboard')} /> },
+  { key: 'login', label: 'Login', render: () => <FintechLogin /> },
   {
     key: 'dashboard',
     label: 'Dashboard',
@@ -55,7 +55,7 @@ const DemoFintechPage: React.FC = () => (
     backHref="/fintech"
     backLabel="Back to case study"
     pages={PAGES}
-    activeTabClassName="px-4 py-2 rounded-lg text-sm font-semibold bg-emerald-500 text-slate-950"
+    activeTabClassName="px-4 py-2 rounded-lg text-sm font-semibold bg-teal-500 text-slate-950"
     idleTabClassName="px-4 py-2 rounded-lg text-sm font-semibold bg-gray-100 dark:bg-zinc-900 text-gray-600 dark:text-zinc-400 hover:text-gray-900 dark:hover:text-white transition-colors"
     frameChromeClassName="bg-slate-800"
   />

@@ -12,7 +12,7 @@ export const FintechShell: React.FC<FintechShellProps> = ({ active, onNavigate, 
   <div className="min-h-[720px] flex bg-slate-950 text-slate-200">
     <aside className="w-56 shrink-0 border-r border-slate-800 p-4 hidden sm:flex sm:flex-col">
       <div className="flex items-center gap-2 mb-8 px-2">
-        <div className="w-8 h-8 rounded-lg bg-emerald-500 flex items-center justify-center font-bold text-slate-950 text-sm">
+        <div className="w-8 h-8 rounded-lg bg-teal-500 flex items-center justify-center font-bold text-slate-950 text-sm">
           N
         </div>
         <span className="font-bold text-white">Nexus Bank</span>
@@ -26,7 +26,7 @@ export const FintechShell: React.FC<FintechShellProps> = ({ active, onNavigate, 
               key={item.key}
               onClick={() => onNavigate(item.key)}
               className={`w-full flex items-center gap-2.5 text-left px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
-                isActive ? 'bg-emerald-500/10 text-emerald-400' : 'text-slate-400 hover:bg-slate-800 hover:text-slate-200'
+                isActive ? 'bg-teal-500/10 text-teal-400' : 'text-slate-400 hover:bg-slate-800 hover:text-slate-200'
               }`}
             >
               <Icon size={16} />
