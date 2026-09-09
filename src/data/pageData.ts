@@ -86,20 +86,20 @@ export const TNFOODSAFETY_DATA: CaseStudyData = {
   title: "TNFoodsafety Complaint Redressal System",
   role: "Mobile App Developer",
   summary:
-    "Two React Native apps, built from scratch, letting citizens report food safety violations and officials manage the cases that follow.",
+    "Two React Native apps, built from scratch for Tamil Nadu's Food Safety Department, letting citizens report food safety violations and officials manage the cases that follow.",
   overview:
-    "Built a two-sided complaint redressal system as a pair of native mobile apps: a public Consumer app for filing food safety complaints, and an Officials app for the administrative side — reviewing, triaging, and resolving those cases. Both apps had to hold up to government standards for data integrity and protection while staying simple enough for the general public to use without friction.",
+    "Built a two-sided complaint redressal system as a pair of native mobile apps: TN Foodsafety Consumer, the public-facing app for filing food safety complaints, and TNFSD, the officials-facing app for addressing those complaints and updating records. Both apps had to hold up to government standards for data integrity and protection while staying simple enough for the general public to use without friction.",
   responsibilities: [
-    "Built the Consumer app from scratch: complaint submission with photo evidence, location tagging, and status tracking for citizens reporting violations.",
-    "Built the Officials app from scratch: case queues, triage, and resolution workflows for administrative staff.",
-    "Designed a shared data model so complaints filed on the Consumer app flow directly into the Officials app in real time.",
+    "Built TN Foodsafety Consumer from scratch: complaint submission with photo evidence, location tagging, and status tracking for citizens reporting violations.",
+    "Built TNFSD from scratch: case queues for officials to review incoming complaints, address them, and update the official record.",
+    "Designed a shared data model so complaints filed on TN Foodsafety Consumer flow directly into TNFSD in real time.",
     "Maintained strict compliance with government data integrity and protection standards across both apps.",
   ],
   techStack: ["React Native", "React", "Redux", "Bootstrap", "Firebase"],
   highlights: [
     {
       title: "Two apps, one system",
-      detail: "Consumer and Officials apps built and shipped as a matched pair, sharing one real-time data model.",
+      detail: "TN Foodsafety Consumer and TNFSD built and shipped as a matched pair, sharing one real-time data model.",
     },
     {
       title: "Compliance-first",

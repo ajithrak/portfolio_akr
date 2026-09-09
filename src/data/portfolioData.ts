@@ -77,7 +77,7 @@ export const PROJECTS_DATA: Project[] = [
   },
   {
     title: "Enterprise Banking Web Application",
-    description: "Developed a scalable and secure banking application handling complex financial workflows and high user traffic. Implemented code-splitting, lazy loading, and SSR techniques that cut initial page load times by [X%] and supported [X]+ concurrent users.",
+    description: "Developed a scalable and secure banking application for JPMorgan Chase, handling complex financial workflows and high user traffic. Implemented code-splitting, lazy loading, and SSR techniques that cut initial page load times by [X%] and supported [X]+ concurrent users.",
     techStack: ["React.js", "Next.js", "RTK Query", "Node.js", "REST APIs"],
     platform: "web"
   },
@@ -107,7 +107,7 @@ export const PROJECTS_DATA: Project[] = [
   },
   {
     title: "TNFoodsafety Complaint Redressal System",
-    description: "Built two React Native apps from scratch: a public-facing Consumer app for filing food safety complaints and an Officials app for administrative case management, maintaining strict compliance with government data integrity and protection standards.",
+    description: "Built two React Native apps from scratch for Tamil Nadu's Food Safety Department: TN Foodsafety Consumer, used by the public to log food safety complaints, and TNFSD, used by officials to address complaints and update records — maintaining strict compliance with government data integrity and protection standards.",
     techStack: ["React", "React Native", "Redux", "Bootstrap", "Firebase"],
     platform: "mobile"
   }
