@@ -1,9 +1,16 @@
+export interface ProjectStat {
+  icon: 'star' | 'downloads';
+  value: string;
+}
+
 export interface Project {
   title: string;
   description: string;
   techStack: string[];
+  platform: 'web' | 'mobile';
   externalUrl?: string;
   externalLabel?: string;
+  stats?: ProjectStat[];
 }
 
 export interface ExperienceItem {
@@ -65,34 +72,44 @@ export const PROJECTS_DATA: Project[] = [
   {
     title: "Ford Parts Locator Marketplace (AI-Integrated)",
     description: "Building an e-commerce-style parts marketplace for locating Ford parts, with search, filtering, and discovery across a [X]-item catalog. Integrating AI-driven features into client-facing surfaces, cutting parts-lookup time by [X%].",
-    techStack: ["React.js", "Next.js", "AI Integrations", "TypeScript"]
+    techStack: ["React.js", "Next.js", "AI Integrations", "TypeScript"],
+    platform: "web"
   },
   {
     title: "Enterprise Banking Web Application",
     description: "Developed a scalable and secure banking application handling complex financial workflows and high user traffic. Implemented code-splitting, lazy loading, and SSR techniques that cut initial page load times by [X%] and supported [X]+ concurrent users.",
-    techStack: ["React.js", "Next.js", "RTK Query", "Node.js", "REST APIs"]
-  },
-  {
-    title: "Mental Health Appointment Booking Platform",
-    description: "Built the CareMe Health React Native app from scratch and shipped it to the Google Play Store, where it has 5K+ downloads and a 4.3★ rating. Integrated secure, real-time video conferencing and chat functionalities to support confidential remote health sessions.",
-    techStack: ["React", "React Native", "Next.js", "Redux", "TailwindCSS", "Firebase"],
-    externalUrl: "https://play.google.com/store/apps/details?id=com.careme",
-    externalLabel: "View on Play Store"
+    techStack: ["React.js", "Next.js", "RTK Query", "Node.js", "REST APIs"],
+    platform: "web"
   },
   {
     title: "High-Performance API & State Management System",
     description: "Architected a centralized data-fetching and caching layer. Integrated query invalidation strategies and global error handling filters that cut redundant network calls by [X%] and reduced payload overhead across [X]+ API endpoints.",
-    techStack: ["RTK Query", "Redux Toolkit", "React.js"]
+    techStack: ["RTK Query", "Redux Toolkit", "React.js"],
+    platform: "web"
   },
   {
     title: "Dynamic Form Builder Application",
     description: "Created an intuitive, drag-and-drop form builder template mapping customized input layouts natively to backend schema engines with real-time live preview generation.",
-    techStack: ["Next.js", "Redux", "TailwindCSS"]
+    techStack: ["Next.js", "Redux", "TailwindCSS"],
+    platform: "web"
+  },
+  {
+    title: "Mental Health Appointment Booking Platform",
+    description: "Built the CareMe Health React Native app from scratch and shipped it to the Google Play Store. Integrated secure, real-time video conferencing and chat functionalities to support confidential remote health sessions.",
+    techStack: ["React", "React Native", "Next.js", "Redux", "TailwindCSS", "Firebase"],
+    platform: "mobile",
+    externalUrl: "https://play.google.com/store/apps/details?id=com.careme",
+    externalLabel: "View on Play Store",
+    stats: [
+      { icon: "star", value: "4.3" },
+      { icon: "downloads", value: "5K+" }
+    ]
   },
   {
     title: "TNFoodsafety Complaint Redressal System",
     description: "Built two React Native apps from scratch: a public-facing Consumer app for filing food safety complaints and an Officials app for administrative case management, maintaining strict compliance with government data integrity and protection standards.",
-    techStack: ["React", "React Native", "Redux", "Bootstrap", "Firebase"]
+    techStack: ["React", "React Native", "Redux", "Bootstrap", "Firebase"],
+    platform: "mobile"
   }
 ];
 

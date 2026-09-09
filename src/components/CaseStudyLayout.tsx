@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import type { CaseStudyData } from '../data/pageData';
+import { TechBadge } from './ProjectBadges';
 
 interface CaseStudyLayoutProps {
   data: CaseStudyData;
@@ -9,9 +10,12 @@ interface CaseStudyLayoutProps {
   badgeClassName: string;
   /** Route to a ready-to-use demo template for this domain, e.g. "/demo/fintech" */
   demoHref?: string;
+  /** External link to a live/published version of the project, e.g. a Play Store listing */
+  externalHref?: string;
+  externalLabel?: string;
 }
 
-export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({ data, badgeClassName, demoHref }) => {
+export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({ data, badgeClassName, demoHref, externalHref, externalLabel }) => {
   return (
     <section className="py-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       <motion.div
@@ -39,19 +43,31 @@ export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({ data, badgeCla
           {data.summary}
         </p>
 
-        {demoHref && (
-          <Link
-            to={demoHref}
-            className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 transition-colors mb-10"
-          >
-            View ready-to-use demo template →
-          </Link>
-        )}
+        <div className="flex flex-wrap gap-3 mb-10">
+          {demoHref && (
+            <Link
+              to={demoHref}
+              className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 transition-colors"
+            >
+              View ready-to-use demo template →
+            </Link>
+          )}
+          {externalHref && (
+            <a
+              href={externalHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg border border-gray-300 dark:border-zinc-700 hover:border-indigo-500 dark:hover:border-indigo-500 text-gray-900 dark:text-white transition-colors"
+            >
+              {externalLabel ?? 'View live'} ↗
+            </a>
+          )}
+        </div>
 
         <div className="flex flex-wrap gap-x-6 gap-y-1 text-sm text-gray-500 dark:text-zinc-400 mb-10 border-b border-gray-100 dark:border-zinc-800 pb-6">
           <span><strong className="text-gray-700 dark:text-zinc-300">{data.role}</strong></span>
-          <span>{data.company}</span>
-          <span>{data.period}</span>
+          {data.company && <span>{data.company}</span>}
+          {data.period && <span>{data.period}</span>}
         </div>
 
         <div className="space-y-10">
@@ -85,12 +101,7 @@ export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({ data, badgeCla
             <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Tech Stack</h2>
             <div className="flex flex-wrap gap-2">
               {data.techStack.map((tech, idx) => (
-                <span
-                  key={idx}
-                  className="text-xs font-mono bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 px-2.5 py-1 rounded"
-                >
-                  {tech}
-                </span>
+                <TechBadge key={idx} tech={tech} className="px-2.5 py-1" />
               ))}
             </div>
           </div>

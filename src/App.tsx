@@ -6,6 +6,7 @@ import { Footer } from './components/Footer';
 import HomePage from './pages/HomePage';
 import FintechPage from './pages/FintechPage';
 import HealthcarePage from './pages/HealthcarePage';
+import TNFoodsafetyPage from './pages/TNFoodsafetyPage';
 import DemoFintechPage from './pages/DemoFintechPage';
 import DemoHealthcarePage from './pages/DemoHealthcarePage';
 import DemoEcommercePage from './pages/DemoEcommercePage';
@@ -16,6 +17,7 @@ const AppRoutes = () => (
     <Route path="/" element={<HomePage />} />
     <Route path="/fintech" element={<FintechPage />} />
     <Route path="/healthcare" element={<HealthcarePage />} />
+    <Route path="/tnfoodsafety" element={<TNFoodsafetyPage />} />
     <Route path="/demo/fintech" element={<DemoFintechPage />} />
     <Route path="/demo/healthcare" element={<DemoHealthcarePage />} />
     <Route path="/demo/ecommerce" element={<DemoEcommercePage />} />
