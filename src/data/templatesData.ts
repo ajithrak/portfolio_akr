@@ -15,8 +15,8 @@ export const TEMPLATES_DATA: TemplateItem[] = [
     title: 'Fintech',
     description: 'Banking product template: login, account dashboard, transactions, and settings.',
     href: '/demo/fintech',
-    accentClassName: 'bg-teal-500',
-    badgeClassName: 'bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400',
+    accentClassName: 'bg-emerald-500',
+    badgeClassName: 'bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400',
   },
   {
     slug: 'healthcare',
