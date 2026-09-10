@@ -63,4 +63,13 @@ export const TEMPLATES_DATA: TemplateItem[] = [
     accentClassName: 'bg-amber-500',
     badgeClassName: 'bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400',
   },
+  {
+    slug: 'gilmore',
+    name: 'Gilmore Marketing',
+    title: 'Marketing Agency',
+    description: 'Agency landing page template: services, case studies, team, testimonials, and a quote-request form.',
+    href: '/demo/gilmore',
+    accentClassName: 'bg-purple-600',
+    badgeClassName: 'bg-purple-50 dark:bg-purple-950/40 text-purple-600 dark:text-purple-400',
+  },
 ];
