@@ -108,4 +108,13 @@ export const TEMPLATES_DATA: TemplateItem[] = [
     accentClassName: 'bg-fuchsia-500',
     badgeClassName: 'bg-fuchsia-50 dark:bg-fuchsia-950/40 text-fuchsia-600 dark:text-fuchsia-400',
   },
+  {
+    slug: 'revivy',
+    name: 'Revivy',
+    title: 'Skincare & Beauty',
+    description: 'Botanical skincare landing page template: filterable hero, product collections, a special-offer banner, and customer stories.',
+    href: '/demo/revivy',
+    accentClassName: 'bg-rose-400',
+    badgeClassName: 'bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400',
+  },
 ];

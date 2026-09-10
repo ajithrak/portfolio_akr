@@ -18,6 +18,7 @@ import DemoCleaningPage from './pages/DemoCleaningPage';
 import DemoFashionPage from './pages/DemoFashionPage';
 import DemoVoltEdgePage from './pages/DemoVoltEdgePage';
 import DemoStyleoPage from './pages/DemoStyleoPage';
+import DemoRevivyPage from './pages/DemoRevivyPage';
 
 const AppRoutes = () => (
   <Routes>
@@ -36,6 +37,7 @@ const AppRoutes = () => (
     <Route path="/demo/fashion" element={<DemoFashionPage />} />
     <Route path="/demo/voltedge" element={<DemoVoltEdgePage />} />
     <Route path="/demo/styleo" element={<DemoStyleoPage />} />
+    <Route path="/demo/revivy" element={<DemoRevivyPage />} />
   </Routes>
 );
 
