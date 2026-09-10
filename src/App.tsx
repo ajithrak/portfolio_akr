@@ -14,6 +14,7 @@ import DemoEdtechPage from './pages/DemoEdtechPage';
 import DemoAuraPage from './pages/DemoAuraPage';
 import DemoCareerPage from './pages/DemoCareerPage';
 import DemoGilmorePage from './pages/DemoGilmorePage';
+import DemoCleaningPage from './pages/DemoCleaningPage';
 
 const AppRoutes = () => (
   <Routes>
@@ -28,6 +29,7 @@ const AppRoutes = () => (
     <Route path="/demo/aura" element={<DemoAuraPage />} />
     <Route path="/demo/career" element={<DemoCareerPage />} />
     <Route path="/demo/gilmore" element={<DemoGilmorePage />} />
+    <Route path="/demo/cleaning" element={<DemoCleaningPage />} />
   </Routes>
 );
 

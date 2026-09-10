@@ -72,4 +72,13 @@ export const TEMPLATES_DATA: TemplateItem[] = [
     accentClassName: 'bg-purple-600',
     badgeClassName: 'bg-purple-50 dark:bg-purple-950/40 text-purple-600 dark:text-purple-400',
   },
+  {
+    slug: 'cleaning',
+    name: 'PureShine',
+    title: 'Local Services',
+    description: 'Local services landing page template: service pricing, a booking form, cost calculator, and testimonials.',
+    href: '/demo/cleaning',
+    accentClassName: 'bg-blue-600',
+    badgeClassName: 'bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400',
+  },
 ];
