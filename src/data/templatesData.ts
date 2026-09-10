@@ -81,4 +81,13 @@ export const TEMPLATES_DATA: TemplateItem[] = [
     accentClassName: 'bg-blue-600',
     badgeClassName: 'bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400',
   },
+  {
+    slug: 'fashion',
+    name: 'Impeccify',
+    title: 'Fashion Retail',
+    description: 'Fashion e-commerce landing page template: shop-by-category, best sellers, promotions, and FAQ.',
+    href: '/demo/fashion',
+    accentClassName: 'bg-stone-600',
+    badgeClassName: 'bg-stone-50 dark:bg-stone-950/40 text-stone-600 dark:text-stone-400',
+  },
 ];
