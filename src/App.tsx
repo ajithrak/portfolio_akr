@@ -12,6 +12,7 @@ import DemoHealthcarePage from './pages/DemoHealthcarePage';
 import DemoEcommercePage from './pages/DemoEcommercePage';
 import DemoEdtechPage from './pages/DemoEdtechPage';
 import DemoAuraPage from './pages/DemoAuraPage';
+import DemoCareerPage from './pages/DemoCareerPage';
 
 const AppRoutes = () => (
   <Routes>
@@ -24,6 +25,7 @@ const AppRoutes = () => (
     <Route path="/demo/ecommerce" element={<DemoEcommercePage />} />
     <Route path="/demo/edtech" element={<DemoEdtechPage />} />
     <Route path="/demo/aura" element={<DemoAuraPage />} />
+    <Route path="/demo/career" element={<DemoCareerPage />} />
   </Routes>
 );
 

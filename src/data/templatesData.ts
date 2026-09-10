@@ -54,4 +54,13 @@ export const TEMPLATES_DATA: TemplateItem[] = [
     accentClassName: 'bg-violet-500',
     badgeClassName: 'bg-violet-50 dark:bg-violet-950/40 text-violet-600 dark:text-violet-400',
   },
+  {
+    slug: 'career',
+    name: 'Robert Alison',
+    title: 'Career Coaching',
+    description: 'Personal-brand landing page template: hero, about, pain points, service offerings, and testimonials.',
+    href: '/demo/career',
+    accentClassName: 'bg-amber-500',
+    badgeClassName: 'bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400',
+  },
 ];

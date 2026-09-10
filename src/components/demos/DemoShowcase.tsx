@@ -61,17 +61,19 @@ export const DemoShowcase: React.FC<DemoShowcaseProps> = ({
         </h1>
         <p className="text-lg text-gray-600 dark:text-zinc-400 mb-8 leading-relaxed max-w-2xl">{description}</p>
 
-        <div className="flex flex-wrap gap-2 mb-6">
-          {pages.map((page) => (
-            <button
-              key={page.key}
-              onClick={() => setActiveKey(page.key)}
-              className={page.key === activeKey ? activeTabClassName : idleTabClassName}
-            >
-              {page.label}
-            </button>
-          ))}
-        </div>
+        {pages.length > 1 && (
+          <div className="flex flex-wrap gap-2 mb-6">
+            {pages.map((page) => (
+              <button
+                key={page.key}
+                onClick={() => setActiveKey(page.key)}
+                className={page.key === activeKey ? activeTabClassName : idleTabClassName}
+              >
+                {page.label}
+              </button>
+            ))}
+          </div>
+        )}
 
         <div className="rounded-2xl overflow-hidden border border-gray-200 dark:border-zinc-800 shadow-2xl">
           <div className={`h-9 flex items-center gap-1.5 px-4 ${frameChromeClassName}`}>
