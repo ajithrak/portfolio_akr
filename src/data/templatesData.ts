@@ -99,4 +99,13 @@ export const TEMPLATES_DATA: TemplateItem[] = [
     accentClassName: 'bg-lime-500',
     badgeClassName: 'bg-lime-50 dark:bg-lime-950/40 text-lime-600 dark:text-lime-400',
   },
+  {
+    slug: 'styleo',
+    name: 'Styleo',
+    title: 'Boutique Fashion',
+    description: 'Boutique fashion landing page template: featured collections, new arrivals, promotions, and best sellers.',
+    href: '/demo/styleo',
+    accentClassName: 'bg-fuchsia-500',
+    badgeClassName: 'bg-fuchsia-50 dark:bg-fuchsia-950/40 text-fuchsia-600 dark:text-fuchsia-400',
+  },
 ];
