@@ -90,4 +90,13 @@ export const TEMPLATES_DATA: TemplateItem[] = [
     accentClassName: 'bg-stone-600',
     badgeClassName: 'bg-stone-50 dark:bg-stone-950/40 text-stone-600 dark:text-stone-400',
   },
+  {
+    slug: 'voltedge',
+    name: 'VoltEdge',
+    title: 'Trades & Services',
+    description: 'Electrical/trades services landing page template: quick-contact hero form, services grid, and an emergency-call banner.',
+    href: '/demo/voltedge',
+    accentClassName: 'bg-lime-500',
+    badgeClassName: 'bg-lime-50 dark:bg-lime-950/40 text-lime-600 dark:text-lime-400',
+  },
 ];
