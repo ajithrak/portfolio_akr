@@ -25,7 +25,7 @@ export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({ data, badgeCla
       >
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 mb-8 transition-colors rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
         >
           ← Back to portfolio
         </Link>
@@ -47,7 +47,7 @@ export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({ data, badgeCla
           {demoHref && (
             <Link
               to={demoHref}
-              className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-500 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-950"
             >
               View ready-to-use demo template →
             </Link>
@@ -57,7 +57,7 @@ export const CaseStudyLayout: React.FC<CaseStudyLayoutProps> = ({ data, badgeCla
               href={externalHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg border border-gray-300 dark:border-zinc-700 hover:border-indigo-500 dark:hover:border-indigo-500 text-gray-900 dark:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-lg border border-gray-300 dark:border-zinc-700 hover:border-indigo-500 dark:hover:border-indigo-500 text-gray-900 dark:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-950"
             >
               {externalLabel ?? 'View live'} ↗
             </a>

@@ -9,7 +9,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ theme, toggleTheme }) 
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 rounded-lg bg-gray-100 dark:bg-zinc-800 text-gray-800 dark:text-zinc-200 hover:ring-2 hover:ring-indigo-500 transition-all focus:outline-none"
+      className="p-2 rounded-lg bg-gray-100 dark:bg-zinc-800 text-gray-800 dark:text-zinc-200 hover:ring-2 hover:ring-indigo-500 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
       aria-label="Toggle Theme Mode"
     >
       {theme === 'light' ? (

@@ -7,6 +7,9 @@ import HomePage from './pages/HomePage';
 import FintechPage from './pages/FintechPage';
 import HealthcarePage from './pages/HealthcarePage';
 import TNFoodsafetyPage from './pages/TNFoodsafetyPage';
+import FordPartsPage from './pages/FordPartsPage';
+import ApiStateManagementPage from './pages/ApiStateManagementPage';
+import FormBuilderPage from './pages/FormBuilderPage';
 import DemoFintechPage from './pages/DemoFintechPage';
 import DemoHealthcarePage from './pages/DemoHealthcarePage';
 import DemoEcommercePage from './pages/DemoEcommercePage';
@@ -26,6 +29,9 @@ const AppRoutes = () => (
     <Route path="/fintech" element={<FintechPage />} />
     <Route path="/healthcare" element={<HealthcarePage />} />
     <Route path="/tnfoodsafety" element={<TNFoodsafetyPage />} />
+    <Route path="/ford-parts" element={<FordPartsPage />} />
+    <Route path="/api-state-management" element={<ApiStateManagementPage />} />
+    <Route path="/form-builder" element={<FormBuilderPage />} />
     <Route path="/demo/fintech" element={<DemoFintechPage />} />
     <Route path="/demo/healthcare" element={<DemoHealthcarePage />} />
     <Route path="/demo/ecommerce" element={<DemoEcommercePage />} />

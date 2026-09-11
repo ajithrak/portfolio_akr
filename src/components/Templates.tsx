@@ -25,7 +25,7 @@ export const Templates: React.FC = () => {
               <Link
                 key={template.slug}
                 to={template.href}
-                className="group flex flex-col h-full bg-white dark:bg-zinc-900 rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all"
+                className="group flex flex-col h-full bg-white dark:bg-zinc-900 rounded-xl overflow-hidden shadow-sm hover:shadow-lg hover:-translate-y-0.5 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-950"
               >
                 <div className={`h-1.5 w-full ${template.accentClassName}`} />
                 <div className="flex flex-col h-full p-6">

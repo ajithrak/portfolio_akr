@@ -7,7 +7,10 @@ import { TechBadge, StatBadge } from './ProjectBadges';
 
 // Maps a project card to its dedicated case study route, if one exists.
 const PROJECT_ROUTES: Record<string, string> = {
+  "Ford Parts Locator Marketplace (AI-Integrated)": "/ford-parts",
   "Enterprise Banking Web Application": "/fintech",
+  "High-Performance API & State Management System": "/api-state-management",
+  "Dynamic Form Builder Application": "/form-builder",
   "Mental Health Appointment Booking Platform": "/healthcare",
   "TNFoodsafety Complaint Redressal System": "/tnfoodsafety",
 };
@@ -52,7 +55,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         {hasLink && (
           <div className="flex flex-wrap gap-x-4 gap-y-1">
             {route && (
-              <Link to={route} className="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline">
+              <Link to={route} className="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500">
                 View case study →
               </Link>
             )}
@@ -61,7 +64,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                 href={project.externalUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline"
+                className="text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:underline rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
               >
                 {project.externalLabel ?? 'View live'} ↗
               </a>

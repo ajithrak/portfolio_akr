@@ -7,19 +7,19 @@ export const Footer: React.FC = () => {
       <div className="max-w-6xl mx-auto px-4 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-gray-500 dark:text-zinc-400">
         <p>&copy; {new Date().getFullYear()} Ajithkumar. All rights reserved.</p>
         <div className="flex space-x-6">
-          <a 
-            href={SOCIAL_LINKS.linkedIn} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="hover:text-indigo-500 transition-colors"
+          <a
+            href={SOCIAL_LINKS.linkedIn}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-indigo-500 transition-colors rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
           >
             LinkedIn
           </a>
-          <a 
-            href={SOCIAL_LINKS.gitHub} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className="hover:text-indigo-500 transition-colors"
+          <a
+            href={SOCIAL_LINKS.gitHub}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-indigo-500 transition-colors rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
           >
             GitHub
           </a>
