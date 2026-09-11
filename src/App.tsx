@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, useSearchParams } from 'react-router-dom';
+import { Analytics } from '@vercel/analytics/react';
 import { useTheme } from './hooks/useTheme';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
@@ -54,6 +55,7 @@ const AppShell: React.FC = () => {
 const App: React.FC = () => (
   <BrowserRouter>
     <AppShell />
+    <Analytics />
   </BrowserRouter>
 );
 
