@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useSearchParams } from 'react-router-dom';
 import { useTheme } from './hooks/useTheme';
+import { recordVisit } from './lib/counters';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import HomePage from './pages/HomePage';
@@ -50,6 +51,10 @@ const AppRoutes = () => (
 const AppShell: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    recordVisit();
+  }, []);
 
   // Bare layout for capturing clean, chrome-free screenshots of the demo templates.
   if (searchParams.get('embed') === '1') {

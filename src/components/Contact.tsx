@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import { recordContactSubmission } from '../lib/counters';
 
 interface ToastState {
   show: boolean;
@@ -34,6 +35,7 @@ export const Contact: React.FC = () => {
     const subject = `Portfolio inquiry from ${name || 'website visitor'}`;
     const body = `${message}\n\n---\nFrom: ${name}\nEmail: ${email}`;
     window.location.href = `mailto:ajithrak22@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    recordContactSubmission();
 
     setLoading(true);
 
