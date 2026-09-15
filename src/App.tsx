@@ -1,31 +1,60 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useSearchParams } from 'react-router-dom';
 import { useTheme } from './hooks/useTheme';
+import { recordVisit } from './lib/counters';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import HomePage from './pages/HomePage';
 import FintechPage from './pages/FintechPage';
 import HealthcarePage from './pages/HealthcarePage';
+import TNFoodsafetyPage from './pages/TNFoodsafetyPage';
+import FordPartsPage from './pages/FordPartsPage';
+import ApiStateManagementPage from './pages/ApiStateManagementPage';
+import FormBuilderPage from './pages/FormBuilderPage';
 import DemoFintechPage from './pages/DemoFintechPage';
 import DemoHealthcarePage from './pages/DemoHealthcarePage';
 import DemoEcommercePage from './pages/DemoEcommercePage';
 import DemoEdtechPage from './pages/DemoEdtechPage';
+import DemoAuraPage from './pages/DemoAuraPage';
+import DemoCareerPage from './pages/DemoCareerPage';
+import DemoGilmorePage from './pages/DemoGilmorePage';
+import DemoCleaningPage from './pages/DemoCleaningPage';
+import DemoFashionPage from './pages/DemoFashionPage';
+import DemoVoltEdgePage from './pages/DemoVoltEdgePage';
+import DemoStyleoPage from './pages/DemoStyleoPage';
+import DemoRevivyPage from './pages/DemoRevivyPage';
 
 const AppRoutes = () => (
   <Routes>
     <Route path="/" element={<HomePage />} />
     <Route path="/fintech" element={<FintechPage />} />
     <Route path="/healthcare" element={<HealthcarePage />} />
+    <Route path="/tnfoodsafety" element={<TNFoodsafetyPage />} />
+    <Route path="/ford-parts" element={<FordPartsPage />} />
+    <Route path="/api-state-management" element={<ApiStateManagementPage />} />
+    <Route path="/form-builder" element={<FormBuilderPage />} />
     <Route path="/demo/fintech" element={<DemoFintechPage />} />
     <Route path="/demo/healthcare" element={<DemoHealthcarePage />} />
     <Route path="/demo/ecommerce" element={<DemoEcommercePage />} />
     <Route path="/demo/edtech" element={<DemoEdtechPage />} />
+    <Route path="/demo/aura" element={<DemoAuraPage />} />
+    <Route path="/demo/career" element={<DemoCareerPage />} />
+    <Route path="/demo/gilmore" element={<DemoGilmorePage />} />
+    <Route path="/demo/cleaning" element={<DemoCleaningPage />} />
+    <Route path="/demo/fashion" element={<DemoFashionPage />} />
+    <Route path="/demo/voltedge" element={<DemoVoltEdgePage />} />
+    <Route path="/demo/styleo" element={<DemoStyleoPage />} />
+    <Route path="/demo/revivy" element={<DemoRevivyPage />} />
   </Routes>
 );
 
 const AppShell: React.FC = () => {
   const { theme, toggleTheme } = useTheme();
   const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    recordVisit();
+  }, []);
 
   // Bare layout for capturing clean, chrome-free screenshots of the demo templates.
   if (searchParams.get('embed') === '1') {

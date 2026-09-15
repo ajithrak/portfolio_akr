@@ -48,7 +48,7 @@ export const DemoShowcase: React.FC<DemoShowcaseProps> = ({
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
         <Link
           to={backHref}
-          className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-sm font-medium text-gray-500 dark:text-zinc-400 hover:text-indigo-600 dark:hover:text-indigo-400 mb-8 transition-colors rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500"
         >
           ← {backLabel}
         </Link>
@@ -61,17 +61,19 @@ export const DemoShowcase: React.FC<DemoShowcaseProps> = ({
         </h1>
         <p className="text-lg text-gray-600 dark:text-zinc-400 mb-8 leading-relaxed max-w-2xl">{description}</p>
 
-        <div className="flex flex-wrap gap-2 mb-6">
-          {pages.map((page) => (
-            <button
-              key={page.key}
-              onClick={() => setActiveKey(page.key)}
-              className={page.key === activeKey ? activeTabClassName : idleTabClassName}
-            >
-              {page.label}
-            </button>
-          ))}
-        </div>
+        {pages.length > 1 && (
+          <div className="flex flex-wrap gap-2 mb-6">
+            {pages.map((page) => (
+              <button
+                key={page.key}
+                onClick={() => setActiveKey(page.key)}
+                className={`${page.key === activeKey ? activeTabClassName : idleTabClassName} focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-zinc-950`}
+              >
+                {page.label}
+              </button>
+            ))}
+          </div>
+        )}
 
         <div className="rounded-2xl overflow-hidden border border-gray-200 dark:border-zinc-800 shadow-2xl">
           <div className={`h-9 flex items-center gap-1.5 px-4 ${frameChromeClassName}`}>

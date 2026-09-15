@@ -8,6 +8,8 @@ const HealthcarePage: React.FC = () => {
       data={HEALTHCARE_DATA}
       badgeClassName="bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400"
       demoHref="/demo/healthcare"
+      externalHref="https://play.google.com/store/apps/details?id=com.careme"
+      externalLabel="View on Play Store"
     />
   );
 };
