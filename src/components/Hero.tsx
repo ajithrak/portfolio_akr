@@ -5,7 +5,8 @@ import { HERO_DATA } from '../data/portfolioData';
 export const Hero: React.FC = () => {
   return (
     <section className="min-h-[70vh] lg:min-h-[60vh] flex items-center justify-center py-14 lg:py-16 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-4xl text-center">
+      <div className="max-w-6xl w-full grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+        <div className="text-center lg:text-left">
         <motion.p 
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
@@ -37,7 +38,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-zinc-400 mb-10 leading-relaxed"
+          className="max-w-2xl mx-auto lg:mx-0 text-lg text-gray-600 dark:text-zinc-400 mb-10 leading-relaxed"
         >
           {HERO_DATA.tagline}
         </motion.p>
@@ -46,7 +47,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="flex justify-center gap-4"
+          className="flex justify-center lg:justify-start gap-4"
         >
           <button
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
@@ -60,6 +61,17 @@ export const Hero: React.FC = () => {
           >
             Contact Me
           </button>
+        </motion.div>
+      </div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="hidden sm:flex justify-center"
+        >
+          <div className="w-full max-w-lg p-6 bg-[#1d1c22] rounded-2xl ring-1 ring-black/5 dark:ring-white/10">
+            <img src="/images/hero-illustration.webp" alt="" width={503} height={379} className="w-full h-auto" />
+          </div>
         </motion.div>
       </div>
     </section>
