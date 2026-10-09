@@ -123,6 +123,8 @@ export const Testimonials: React.FC = () => {
                     <Icon className={`w-3.5 h-3.5 ${isActive ? 'text-indigo-600 dark:text-indigo-400' : 'text-gray-400 dark:text-zinc-500'}`} />
                     {label}
                   </button>
+        
+      
                 );
               })}
             </div>
