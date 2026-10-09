@@ -17,6 +17,9 @@ export const About: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8 items-start">
           <div className="md:col-span-2 space-y-4 text-gray-600 dark:text-zinc-400 text-lg leading-relaxed">
             <p>{ABOUT_DATA.bio}</p>
+            <div className="mt-6 p-6">
+              <img src="/images/about-workspace.png" alt="" width={551} height={369} loading="lazy" className="w-full h-auto" />
+            </div>
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 dark:text-white mb-4 text-sm uppercase tracking-wider">Core Principles</h3>

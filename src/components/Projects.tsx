@@ -15,6 +15,15 @@ const PROJECT_ROUTES: Record<string, string> = {
   "TNFoodsafety Complaint Redressal System": "/tnfoodsafety",
 };
 
+const PROJECT_IMAGES: Record<string, string> = {
+  "Ford Parts Locator Marketplace (AI-Integrated)": "project-parts-locator",
+  "Enterprise Banking Web Application": "project-banking",
+  "High-Performance API & State Management System": "project-api-state",
+  "Dynamic Form Builder Application": "project-form-builder",
+  "Mental Health Appointment Booking Platform": "project-mental-health",
+  "TNFoodsafety Complaint Redressal System": "project-tnfoodsafety",
+};
+
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
   const route = PROJECT_ROUTES[project.title];
   const hasLink = Boolean(route || project.externalUrl);
@@ -26,6 +35,11 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         hasLink ? 'hover:shadow-lg hover:-translate-y-0.5' : 'hover:shadow-md'
       }`}
     >
+      {PROJECT_IMAGES[project.title] && (
+        <div className="aspect-[16/9] shrink-0 overflow-hidden p-5 border-b border-gray-200 dark:border-zinc-800">
+          <img src={`/images/${PROJECT_IMAGES[project.title]}.png`} alt="" loading="lazy" className="w-full h-full object-contain" />
+        </div>
+      )}
       <div className="p-6 flex flex-col h-full justify-between">
         <div>
           <div className="flex items-start justify-between gap-3 mb-2">

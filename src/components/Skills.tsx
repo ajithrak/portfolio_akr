@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SKILLS_DATA } from '../data/portfolioData';
 
+const SKILL_IMAGES = ['skill-frontend', 'skill-state', 'skill-styling', 'skill-backend', 'skill-performance'];
+
 export const Skills: React.FC = () => {
   return (
     <section id="skills" className="py-20 bg-gray-50/80 dark:bg-zinc-900/30 scroll-mt-16">
@@ -18,6 +20,11 @@ export const Skills: React.FC = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-10">
             {SKILLS_DATA.map((cat, idx) => (
               <div key={idx}>
+                {SKILL_IMAGES[idx] && (
+                  <div className="mb-4 h-36 flex items-center justify-center p-4">
+                    <img src={`/images/${SKILL_IMAGES[idx]}.png`} alt="" loading="lazy" className="w-full h-full object-contain" />
+                  </div>
+                )}
                 <h3 className="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-4">
                   {cat.category}
                 </h3>
