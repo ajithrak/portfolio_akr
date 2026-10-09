@@ -167,8 +167,8 @@ export const Contact: React.FC = () => {
             </li>
           </ul>
 
-          <div className="hidden md:flex mt-8 p-5 justify-center bg-[#1d1c22] rounded-2xl ring-1 ring-black/5 dark:ring-white/10">
-            <img src="/images/contact-illustration.webp" alt="" width={427} height={350} loading="lazy" className="w-full max-w-xs h-auto" />
+          <div className="hidden md:flex mt-8 p-5 justify-center">
+            <img src="/images/contact-illustration.png" alt="" width={427} height={350} loading="lazy" className="w-full max-w-xs h-auto" />
           </div>
 
           <dl className="mt-6 space-y-2 text-sm text-gray-600 dark:text-zinc-400">

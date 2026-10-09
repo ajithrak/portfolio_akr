@@ -36,8 +36,8 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
       }`}
     >
       {PROJECT_IMAGES[project.title] && (
-        <div className="aspect-[16/9] shrink-0 overflow-hidden bg-[#1d1c22] p-5 border-b border-gray-200 dark:border-zinc-800">
-          <img src={`/images/${PROJECT_IMAGES[project.title]}.webp`} alt="" loading="lazy" className="w-full h-full object-contain" />
+        <div className="aspect-[16/9] shrink-0 overflow-hidden p-5 border-b border-gray-200 dark:border-zinc-800">
+          <img src={`/images/${PROJECT_IMAGES[project.title]}.png`} alt="" loading="lazy" className="w-full h-full object-contain" />
         </div>
       )}
       <div className="p-6 flex flex-col h-full justify-between">

@@ -69,8 +69,8 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="hidden sm:flex justify-center"
         >
-          <div className="w-full max-w-lg p-6 bg-[#1d1c22] rounded-2xl ring-1 ring-black/5 dark:ring-white/10">
-            <img src="/images/hero-illustration.webp" alt="" width={503} height={379} className="w-full h-auto" />
+          <div className="w-full max-w-lg p-6">
+            <img src="/images/hero-illustration.png" alt="" width={503} height={379} className="w-full h-auto" />
           </div>
         </motion.div>
       </div>

@@ -21,8 +21,8 @@ export const Skills: React.FC = () => {
             {SKILLS_DATA.map((cat, idx) => (
               <div key={idx}>
                 {SKILL_IMAGES[idx] && (
-                  <div className="mb-4 h-36 flex items-center justify-center p-4 bg-[#1d1c22] rounded-2xl ring-1 ring-black/5 dark:ring-white/10">
-                    <img src={`/images/${SKILL_IMAGES[idx]}.webp`} alt="" loading="lazy" className="w-full h-full object-contain" />
+                  <div className="mb-4 h-36 flex items-center justify-center p-4">
+                    <img src={`/images/${SKILL_IMAGES[idx]}.png`} alt="" loading="lazy" className="w-full h-full object-contain" />
                   </div>
                 )}
                 <h3 className="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400 mb-4">

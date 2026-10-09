@@ -17,8 +17,8 @@ export const About: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8 items-start">
           <div className="md:col-span-2 space-y-4 text-gray-600 dark:text-zinc-400 text-lg leading-relaxed">
             <p>{ABOUT_DATA.bio}</p>
-            <div className="mt-6 p-6 bg-[#1d1c22] rounded-2xl ring-1 ring-black/5 dark:ring-white/10">
-              <img src="/images/about-workspace.webp" alt="" width={551} height={369} loading="lazy" className="w-full h-auto" />
+            <div className="mt-6 p-6">
+              <img src="/images/about-workspace.png" alt="" width={551} height={369} loading="lazy" className="w-full h-auto" />
             </div>
           </div>
           <div>
