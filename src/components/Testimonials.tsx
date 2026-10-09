@@ -30,7 +30,8 @@ const CATEGORIES: { label: string; value: FilterValue; icon: IconType }[] = [
 ];
 
 // Placeholders render only in `npm run dev`, and only while there is no real data.
-const IS_PREVIEW = import.meta.env.DEV && TESTIMONIALS_DATA.length === 0;
+// PREVIEW BRANCH ONLY: show placeholders in this build so the layout can be reviewed on a Vercel preview URL. Do not merge.
+const IS_PREVIEW = TESTIMONIALS_DATA.length === 0;
 const ITEMS: TestimonialItem[] = IS_PREVIEW ? PLACEHOLDER_TESTIMONIALS : TESTIMONIALS_DATA;
 
 // Only show filter tabs for categories that actually have testimonials.
